@@ -1,0 +1,21 @@
+﻿<Window x:Class="MyMediaPlayerApp.MediaPlayerControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyMediaPlayerApp"
+        mc:Ignorable="d"
+        Title="Maajha Audio Player" Height="200" Width="300">
+    <StackPanel Margin ="10">
+        <Label Name="lblStatus" Content="Not Playing..." HorizontalContentAlignment="Center" Margin="5" />
+        <Button Name="selectAudioFile" Click="selectAudioFile_Click">Select Audio File</Button>
+        <StackPanel x:Name="SPSeekBar" HorizontalAlignment="Stretch">
+            <Slider x:Name="audioSlider" Thumb.DragStarted ="audioSlider_DragStarted" Thumb.DragCompleted ="audioSlider_DragCompleted" />
+        </StackPanel>
+        <WrapPanel HorizontalAlignment="Center">
+            <Button Name="btnPlay" Click="btnPlay_Click">Play Karo</Button>
+            <Button Name="btnPause" Margin ="5" Click="btnPause_Click">Pause Karo</Button>
+            <Button Name="btnStop" Click="btnStop_Click">Stop Karo</Button>
+        </WrapPanel>
+    </StackPanel>
+</Window>
